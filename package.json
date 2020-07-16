@@ -1,6 +1,6 @@
 {
   "name": "nk-changelog-gen",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "nk-changelog-gen",
   "main": "index.js",
   "scripts": {
