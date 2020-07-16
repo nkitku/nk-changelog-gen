@@ -4,7 +4,8 @@
   "description": "nk-changelog-gen",
   "main": "index.js",
   "scripts": {
-    "changelog": "node index.js"
+    "changelog": "node index.js",
+    "version": "node index.js && git add CHANGELOG.md"
   },
   "keywords": [],
   "author": "nkiktu",
