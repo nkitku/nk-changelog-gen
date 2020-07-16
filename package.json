@@ -1,0 +1,16 @@
+{
+  "name": "nk-changelog-gen",
+  "version": "0.0.0",
+  "description": "nk-changelog-gen",
+  "main": "index.js",
+  "scripts": {
+    "changelog": "node index.js"
+  },
+  "keywords": [],
+  "author": "nkiktu",
+  "devDependencies": {
+    "compare-func": "^2.0.0",
+    "conventional-changelog": "^3.1.21"
+  },
+  "license": "MIT"
+}
