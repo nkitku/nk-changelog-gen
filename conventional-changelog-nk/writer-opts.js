@@ -1,7 +1,4 @@
-"use strict";
-
 const compareFunc = require("compare-func");
-// const Q = require('q')
 const util = require("util");
 const gitEmojis = require("./gitmojis");
 const parserOpts = require("./parser-opts");
