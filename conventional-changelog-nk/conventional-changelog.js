@@ -1,5 +1,5 @@
-const parserOpts = require("./parser-opts");
-const writerOpts = require("./writer-opts");
+const parserOpts = require('./parser-opts');
+const writerOpts = require('./writer-opts');
 
 module.exports = Promise.all([parserOpts, writerOpts]).then(
   ([parserOpts, writerOpts]) => {
