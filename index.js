@@ -3,6 +3,7 @@ const conventionalChangelog = require('conventional-changelog');
 
 const config = require('./conventional-changelog-nk');
 
+// set of required data
 const gitFormat = {
   '': 'B',
   hash: 'H',
