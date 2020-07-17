@@ -10,11 +10,11 @@
   "keywords": [],
   "author": "nkiktu",
   "dependencies": {
+    "@release-it/conventional-changelog": "github:nkitku/conventional-changelog",
     "compare-func": "^2.0.0",
     "conventional-changelog": "^3.1.21"
   },
   "devDependencies": {
-    "@release-it/conventional-changelog": "^1.1.4",
     "release-it": "*"
   },
   "license": "MIT"

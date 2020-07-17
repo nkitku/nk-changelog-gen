@@ -1,3 +1,5 @@
+const { gitRawCommitsFormat } = require('./src/git-raw-format');
+
 module.exports = {
   git: {
     commitMessage: 'chore: release v${version}',
@@ -7,8 +9,12 @@ module.exports = {
   npm: { publish: false },
   plugins: {
     '@release-it/conventional-changelog': {
-      config: require('./conventional-changelog-nk'),
-      infile: 'CHANGELOG.md',
+      options: {
+        config: require('./conventional-changelog-nk'),
+        infile: 'CHANGELOG.md',
+      },
+      context: {},
+      gitRawCommitsOpts: { format: gitRawCommitsFormat },
     },
   },
 };

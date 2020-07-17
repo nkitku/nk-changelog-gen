@@ -2,21 +2,7 @@ const fs = require('fs');
 const conventionalChangelog = require('conventional-changelog');
 
 const config = require('./conventional-changelog-nk');
-
-// set of required data
-const gitFormat = {
-  '': 'B',
-  hash: 'H',
-  gitTags: 'd',
-  committerDate: 'ci',
-  authorName: 'an',
-  committerUnix: 'ct',
-};
-
-const format = Object.entries(gitFormat)
-  .map(([k, v]) => `-${k}-%n%${v}`)
-  .join('%n')
-  .replace('--%n', '');
+const { gitRawCommitsFormat } = require('./src/git-raw-format');
 
 const options = {
   append: false,
@@ -28,7 +14,7 @@ const options = {
   config,
 };
 const changelogStream = conventionalChangelog(options, undefined, {
-  format,
+  format: gitRawCommitsFormat,
 }).on('error', function (err) {
   console.error(err.stack);
   // if (true) {
