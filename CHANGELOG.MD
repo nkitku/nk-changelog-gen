@@ -1,4 +1,17 @@
-# [Unreleased](https://github.com/nkitku/nk-changelog-gen/compare/v0.1.1...0982ee48d8c63ea1a0da3411719c1886b29613fe) (2020-07-17)
+## [0.1.2](https://github.com/nkitku/nk-changelog-gen/compare/v0.1.1...v0.1.2) (2020-07-17)
+
+
+### Bug Fixes
+
+* **template:** :bug: fixed template indentation ([0982ee4](https://github.com/nkitku/nk-changelog-gen/commit/0982ee48d8c63ea1a0da3411719c1886b29613fe))
+
+
+### Household Chores
+
+* :sparkles: update changelog ([490ad37](https://github.com/nkitku/nk-changelog-gen/commit/490ad37d72ebf74fafbc8d153ad0d4539c3f8413))
+* :art: format code ([084d8a6](https://github.com/nkitku/nk-changelog-gen/commit/084d8a66b603520ae81846690ab4a13182034915))
+
+## [0.1.2](https://github.com/nkitku/nk-changelog-gen/compare/v0.1.1...v0.1.2) (2020-07-17)
 
 
 ### Bug Fixes
@@ -9,6 +22,7 @@
 ### Household Chores
 
 * :art: format code (nkitku) (2020-07-17T00:42:43.000Z) ([084d8a6](https://github.com/nkitku/nk-changelog-gen/commit/084d8a66b603520ae81846690ab4a13182034915))
+* :sparkles: update changelog (nkitku) (2020-07-17T00:45:08.000Z) ([490ad37](https://github.com/nkitku/nk-changelog-gen/commit/490ad37d72ebf74fafbc8d153ad0d4539c3f8413))
 
 
 
