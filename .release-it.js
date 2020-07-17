@@ -3,7 +3,7 @@ module.exports = {
     commitMessage: "chore: release v${version}",
     requireCleanWorkingDir: true,
   },
-  github: { release: false },
+  github: { release: true },
   npm: { publish: false },
   plugins: {
     "@release-it/conventional-changelog": {
