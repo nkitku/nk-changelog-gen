@@ -1,25 +1,34 @@
-const fs = require('fs');
-const conventionalChangelog = require('conventional-changelog');
+const fs = require("fs");
+const conventionalChangelog = require("conventional-changelog");
 
-const config = require('./conventional-changelog-nk');
+const config = require("./conventional-changelog-nk");
 
 const gitFormat = {
-  '': 'B',
-  hash: 'H',
-  gitTags: 'd',
-  committerDate: 'ci',
-  authorName: 'an',
-  committerUnix: 'ct',
+  "": "B",
+  hash: "H",
+  gitTags: "d",
+  committerDate: "ci",
+  authorName: "an",
+  committerUnix: "ct",
 };
 
 const format = Object.entries(gitFormat)
   .map(([k, v]) => `-${k}-%n%${v}`)
-  .join('%n')
-  .replace('--%n', '');
+  .join("%n")
+  .replace("--%n", "");
 
-const changelogStream = conventionalChangelog({ config }, undefined, {
+const options = {
+  append: false,
+  releaseCount: 0,
+  skipUnstable: false,
+  outputUnreleased: true,
+  // lernaPackage: false,
+  // tagPrefix: "v",
+  config,
+};
+const changelogStream = conventionalChangelog(options, undefined, {
   format,
-}).on('error', function (err) {
+}).on("error", function (err) {
   console.error(err.stack);
   // if (true) {
 
@@ -29,7 +38,7 @@ const changelogStream = conventionalChangelog({ config }, undefined, {
   process.exit(1);
 });
 
-const inFile = 'CHANGELOG.MD';
+const inFile = "CHANGELOG.MD";
 const outFile = inFile;
 const sameFile = true;
 const releaseCount = 0;
@@ -45,9 +54,9 @@ function noInputFile() {
 }
 
 if (inFile && releaseCount !== 0) {
-  let readStream = fs.createReadStream(inFile).on('error', function () {
+  let readStream = fs.createReadStream(inFile).on("error", function () {
     if (flags.verbose) {
-      console.warn('inFile does not exist.');
+      console.warn("inFile does not exist.");
     }
 
     if (sameFile) {
@@ -59,7 +68,7 @@ if (inFile && releaseCount !== 0) {
     if (options.append) {
       changelogStream.pipe(
         fs.createWriteStream(outFile, {
-          flags: 'a',
+          flags: "a",
         })
       );
     } else {
